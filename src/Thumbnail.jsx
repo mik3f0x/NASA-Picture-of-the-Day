@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
-function Thumbnail({ item }) {
+function Thumbnail({ thumbnail }) {
   return (
     <div>
-      <Link to={`/${item._id}`}>
-        <img className="thumbnails" src={item.url} alt={item.title} />
+      <Link to={`/${thumbnail._id}`}>
+        <img className="thumbnails" src={thumbnail.url} alt={thumbnail.title} />
       </Link>
     </div>
   );
