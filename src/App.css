@@ -2,6 +2,18 @@
   text-align: center;
 }
 
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.thumbnails {
+  height: 250px;
+  width: 320px;
+  margin: 20px;
+  object-fit: cover;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
