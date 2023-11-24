@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { getOne } from "../services/actions";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 function Focus() {
   const [photo, setPhoto] = useState({});
@@ -19,7 +19,11 @@ function Focus() {
   return (
     <div>
       <h1>{photo.title}</h1>
-      <img src={photo.hdurl} alt={photo.title} />
+      <div className="image-container">
+        <Link to={photo.hdurl}>
+          <img src={photo.hdurl} alt={photo.title} />
+        </Link>
+      </div>
       <h3>{photo.date}</h3>
       <p>{photo.explanation}</p>
     </div>
