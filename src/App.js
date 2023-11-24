@@ -17,6 +17,7 @@ function App() {
   async function fetchThumbnails() {
     const allThumbnails = await getAll();
     setThumbnails(allThumbnails);
+    setFilteredThumbnails(allThumbnails);
   }
 
   return (
