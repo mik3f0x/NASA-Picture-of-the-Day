@@ -2,23 +2,23 @@ import { useState, useEffect } from "react";
 import { getAll } from "../services/actions";
 import Thumbnail from "../components/Thumbnail";
 
-function Grid() {
-  const [thumbnails, setThumbnails] = useState([]);
+function Grid({ filteredThumbnails }) {
+  // const [thumbnails, setThumbnails] = useState([]);
 
-  useEffect(() => {
-    fetchThumbnails();
-  }, []);
+  // useEffect(() => {
+  //   fetchThumbnails();
+  // }, []);
 
-  async function fetchThumbnails() {
-    const allThumbnails = await getAll();
-    setThumbnails(allThumbnails);
-  }
+  // async function fetchThumbnails() {
+  //   const allThumbnails = await getAll();
+  //   setThumbnails(allThumbnails);
+  // }
 
   return (
     <div>
       <h1>All 100 images</h1>
       <div className="grid">
-        {thumbnails.map((thumbnail) => (
+        {filteredThumbnails.map((thumbnail) => (
           <Thumbnail thumbnail={thumbnail} />
         ))}
       </div>
