@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 function NavBar({ thumbnails, setFilteredThumbnails }) {
   const [searchTerm, setSearchTerm] = useState("");
+
+  const navigate = useNavigate();
 
   const handleSearch = (e) => {
     let term = e.target.value.toLowerCase();
@@ -19,7 +21,7 @@ function NavBar({ thumbnails, setFilteredThumbnails }) {
 
     setFilteredThumbnails(results);
 
-    // navigate("/grid");
+    navigate("/");
   };
 
   return (
