@@ -24,6 +24,21 @@ function NavBar({ thumbnails, setFilteredThumbnails }) {
     navigate("/");
   };
 
+  const handleDropdown = (e) => {
+    console.log(e.target.value);
+  };
+
+  const currentYear = new Date().getFullYear();
+  const years = [];
+
+  for (let year = currentYear; year >= 1995; year--) {
+    years.push(
+      <option key={year} value={year}>
+        {year}
+      </option>
+    );
+  }
+
   return (
     <nav className="navbar">
       <NavLink to="/">
@@ -37,6 +52,9 @@ function NavBar({ thumbnails, setFilteredThumbnails }) {
         onChange={handleSearch}
         name="Search"
       />
+      <select name="years" id="years" onChange={handleDropdown}>
+        {years}
+      </select>
     </nav>
   );
 }
