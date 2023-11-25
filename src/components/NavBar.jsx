@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import { getByYear } from "../services/actions";
 
 function NavBar({ thumbnails, setFilteredThumbnails }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -24,9 +25,11 @@ function NavBar({ thumbnails, setFilteredThumbnails }) {
     navigate("/");
   };
 
-  const handleDropdown = (e) => {
-    console.log(e.target.value);
-  };
+  async function handleDropdown(e) {
+    const yearThumbnails = await getByYear(e.target.value);
+    setFilteredThumbnails(yearThumbnails);
+    navigate("/");
+  }
 
   const currentYear = new Date().getFullYear();
   const years = [];

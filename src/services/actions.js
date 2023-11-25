@@ -17,3 +17,12 @@ export const getOne = async (id) => {
     console.error("Error: Getting Image: ", error);
   }
 };
+
+export const getByYear = async (year) => {
+  try {
+    const response = await api.get(`/year/${year}`);
+    return response.data;
+  } catch (error) {
+    console.error("Error: Getting images for that year: ", error);
+  }
+};
