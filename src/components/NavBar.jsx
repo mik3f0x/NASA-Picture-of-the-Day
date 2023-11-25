@@ -7,6 +7,12 @@ function NavBar({ thumbnails, setFilteredThumbnails }) {
 
   const navigate = useNavigate();
 
+  const handleClick = () => {
+    setSearchTerm("");
+    setFilteredThumbnails(thumbnails);
+    navigate("/");
+  };
+
   const handleSearch = (e) => {
     let term = e.target.value.toLowerCase();
     setSearchTerm(term);
@@ -44,9 +50,7 @@ function NavBar({ thumbnails, setFilteredThumbnails }) {
 
   return (
     <nav className="navbar">
-      <NavLink to="/">
-        <span className="home">Home</span>
-      </NavLink>
+      <button onClick={handleClick}>Home</button>
       <input
         type="text"
         placeholder="Search..."
