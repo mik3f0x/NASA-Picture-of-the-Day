@@ -26,3 +26,12 @@ export const getByYear = async (year) => {
     console.error("Error: Getting images for that year: ", error);
   }
 };
+
+export const deleteOne = async (id) => {
+  try {
+    const response = await api.delete(`/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+  }
+};

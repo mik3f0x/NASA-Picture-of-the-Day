@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
-import { getOne } from "../services/actions";
-import { useParams, Link } from "react-router-dom";
+import { deleteOne, getOne } from "../services/actions";
+import { useParams, Link, useNavigate } from "react-router-dom";
 
-function Focus() {
+function Focus({ fetchThumbnails }) {
   const [photo, setPhoto] = useState({});
+
+  const navigate = useNavigate();
 
   let { id } = useParams();
 
@@ -16,6 +18,12 @@ function Focus() {
     setPhoto(focusPhoto);
   }
 
+  async function handleDelete() {
+    await deleteOne(id);
+    fetchThumbnails();
+    navigate("/");
+  }
+
   return (
     <div>
       <h1>{photo.title}</h1>
@@ -26,6 +34,7 @@ function Focus() {
       </div>
       <h3>{photo.date}</h3>
       <p>{photo.explanation}</p>
+      <button onClick={handleDelete}>Delete Image</button>
     </div>
   );
 }

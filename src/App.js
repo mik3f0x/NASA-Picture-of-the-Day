@@ -31,7 +31,10 @@ function App() {
           path="/"
           element={<Grid filteredThumbnails={filteredThumbnails} />}
         />
-        <Route path="/:id" element={<Focus />} />
+        <Route
+          path="/:id"
+          element={<Focus fetchThumbnails={fetchThumbnails} />}
+        />
       </Routes>
     </div>
   );
