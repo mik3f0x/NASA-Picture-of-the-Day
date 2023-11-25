@@ -27,6 +27,15 @@ export const getByYear = async (year) => {
   }
 };
 
+export const createImage = async (imageData) => {
+  try {
+    const response = await api.post("/", imageData);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const deleteOne = async (id) => {
   try {
     const response = await api.delete(`/${id}`);

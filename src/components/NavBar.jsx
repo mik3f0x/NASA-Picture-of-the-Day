@@ -62,6 +62,7 @@ function NavBar({ thumbnails, setFilteredThumbnails }) {
       <select name="years" id="years" onChange={handleDropdown}>
         {years}
       </select>
+      <NavLink to="/new-image">Add Your Own!</NavLink>
     </nav>
   );
 }

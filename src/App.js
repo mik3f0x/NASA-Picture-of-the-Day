@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getAll } from "./services/actions.js";
 import NavBar from "./components/NavBar.jsx";
+import NewImage from "./screens/NewImage.jsx";
 
 function App() {
   const [thumbnails, setThumbnails] = useState([]);
@@ -34,6 +35,10 @@ function App() {
         <Route
           path="/:id"
           element={<Focus fetchThumbnails={fetchThumbnails} />}
+        />
+        <Route
+          path="/new-image"
+          element={<NewImage fetchThumbnails={fetchThumbnails} />}
         />
       </Routes>
     </div>
