@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# NASA Picture of the Day
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React frontend application that provides a user interface for interacting with a database of NASA images. The backend database, created by [Author's Name], serves as the data source for this application. The frontend allows users to perform full CRUD (Create, Read, Update, Delete) operations on the images.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Browse Images:** View a gallery of NASA images.
+- **Search by string:** Search for specific images by keywords.
+- **Search by year:** Use a dropdown menu to search for images taken in a particular year.
+- **Create:** Add new images to the database.
+- **Update:** Modify the image or its information.
+- **Delete:** Remove images from the collection.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To run this application locally, follow these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository:
 
-### `npm test`
+```
+git clone https://github.com/mik3f0x/NASA-Picture-of-the-Day.git
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install dependencies:
 
-### `npm run build`
+```
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Start the development server:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Access the application at `http://localhost:3000` in your web browser.
 
-### `npm run eject`
+## Technologies Used
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- React
+- Backend deployed on Heroku
+- Frontend deployed on Netlify
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Browse Images:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Navigate through the homepage gallery to view available images.
+- Click on individual images to view details.
 
-## Learn More
+2. **Search Images:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Use the search feature to find images based on keywords or tags.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. **Add New Images:**
 
-### Code Splitting
+- Add new images to the database by filling out the necessary information.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. **Update/Delete Images:**
 
-### Analyzing the Bundle Size
+- Edit image details or delete images as needed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contributing
 
-### Making a Progressive Web App
+Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Fork the repository.
+2. Create your feature branch: `git checkout -b feature/YourFeature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin feature/YourFeature`
+5. Submit a pull request.
 
-### Advanced Configuration
+## Credits
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Nic Ponder - _Backend Database Creator_
+- Mike Fox - _Frontend Developer_
 
-### Deployment
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For any questions or inquiries, please reach out to mikefox@gmail.com
