@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { getAll } from "./services/actions.js";
 import NavBar from "./components/NavBar.jsx";
 import NewImage from "./screens/NewImage.jsx";
+import EditImage from "./screens/EditImage.jsx";
 
 function App() {
   const [thumbnails, setThumbnails] = useState([]);
@@ -40,6 +41,7 @@ function App() {
           path="/new-image"
           element={<NewImage fetchThumbnails={fetchThumbnails} />}
         />
+        <Route path="/:id/edit" element={<EditImage />} />
       </Routes>
     </div>
   );

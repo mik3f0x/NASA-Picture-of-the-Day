@@ -34,6 +34,9 @@ function Focus({ fetchThumbnails }) {
       </div>
       <h3>{photo.date}</h3>
       <p>{photo.explanation}</p>
+      <Link to={`/${id}/edit`}>
+        <button>Edit Image</button>
+      </Link>
       <button onClick={handleDelete}>Delete Image</button>
     </div>
   );

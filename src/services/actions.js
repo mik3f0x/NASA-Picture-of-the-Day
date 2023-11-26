@@ -36,6 +36,15 @@ export const createImage = async (imageData) => {
   }
 };
 
+export const editImage = async (id, imageData) => {
+  try {
+    const response = await api.put(`/${id}`, imageData);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 export const deleteOne = async (id) => {
   try {
     const response = await api.delete(`/${id}`);
