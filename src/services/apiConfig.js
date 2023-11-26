@@ -3,8 +3,8 @@ import axios from "axios";
 let apiUrl;
 
 const apiUrls = {
-  production: "",
-  development: "http://localhost:3000/api/astronomy/",
+  production: "https://astronomy-api-3a059f9816f1.herokuapp.com/api/astronomy",
+  development: "https://astronomy-api-3a059f9816f1.herokuapp.com/api/astronomy",
 };
 
 if (window.location.hostname === "localhost") {
