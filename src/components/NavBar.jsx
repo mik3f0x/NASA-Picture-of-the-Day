@@ -51,9 +51,9 @@ function NavBar({ thumbnails, setFilteredThumbnails }) {
   return (
     <nav className="navbar">
       <div className="nav-img-container">
-        <img src="nasa-banner.png" alt="NASA" />
+        <img src={require("../images/nasa-banr.webp")} alt="NASA" />
       </div>
-      <div>
+      <div className="nav-controls">
         <button onClick={handleClick}>Home</button>
         <input
           type="text"
@@ -66,7 +66,12 @@ function NavBar({ thumbnails, setFilteredThumbnails }) {
         <select name="years" id="years" onChange={handleDropdown}>
           {years}
         </select>
-        <NavLink to="/new-image">Add Your Own!</NavLink>
+        <NavLink to="/new-image" className="create-btn">
+          Add Your Own!
+        </NavLink>
+      </div>
+      <div className="heading">
+        <h2>NASA Astronomy Picture of the Day</h2>
       </div>
     </nav>
   );

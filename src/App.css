@@ -10,7 +10,7 @@
   background-color: black;
   height: 100px;
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
 }
 
 .nav-img-container {
@@ -20,6 +20,30 @@
 .nav-img-container img {
   height: 100%;
   width: 100%;
+}
+
+.nav-controls {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.create-btn {
+  font: bold 11px Helvetica;
+  text-decoration: none;
+  background-color: #eeeeee;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #cccccc;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #cccccc;
+  border-radius: 2px;
+}
+
+.heading {
+  padding: 20px;
 }
 
 .grid {
