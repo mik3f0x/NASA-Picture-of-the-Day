@@ -46,12 +46,13 @@ function EditImage() {
       <form className="create-form" onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Add a title for the image:"
+          placeholder="Edit image title"
           name="title"
           value={image.title}
           onChange={handleChange}
         />
         <input
+          className="enter-date"
           type="text"
           placeholder="Date the image was taken:"
           name="date"
@@ -59,8 +60,9 @@ function EditImage() {
           onChange={handleChange}
         />
         <input
+          className="enter-expln"
           type="text"
-          placeholder="Date the image was taken:"
+          placeholder="Edit image description"
           name="explanation"
           value={image.explanation}
           onChange={handleChange}
@@ -79,7 +81,9 @@ function EditImage() {
           value={image.hdurl}
           onChange={handleChange}
         />
-        <button type="submit">Edit Image Data</button>
+        <button className="submit-btn" type="submit">
+          Edit Image Data
+        </button>
       </form>
     </div>
   );

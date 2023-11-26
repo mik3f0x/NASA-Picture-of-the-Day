@@ -88,6 +88,30 @@
   margin-left: 10px;
 }
 
+.create-form {
+  width: 80vw;
+  margin-left: 10vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.create-form input {
+  margin-bottom: 25px;
+}
+
+.enter-date {
+  width: 200px;
+}
+
+.enter-expln {
+  height: 100px;
+}
+
+.submit-btn {
+  width: 150px;
+  margin-top: 50px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

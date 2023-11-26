@@ -36,41 +36,46 @@ function NewImage({ fetchThumbnails }) {
       <h1>Add your own Astronomy Image to the Database!</h1>
       <form className="create-form" onSubmit={handleSubmit}>
         <input
+          className="enter-title"
           type="text"
-          placeholder="Add a title for the image:"
+          placeholder="Add a title for the image"
           name="title"
           value={image.title}
           onChange={handleChange}
         />
         <input
+          className="enter-date"
           type="text"
-          placeholder="Date the image was taken:"
+          placeholder="Date taken (YYYY-MM-DD)"
           name="date"
           value={image.date}
           onChange={handleChange}
         />
         <input
+          className="enter-expln"
           type="text"
-          placeholder="Date the image was taken:"
+          placeholder="A description of the image"
           name="explanation"
           value={image.explanation}
           onChange={handleChange}
         />
         <input
           type="text"
-          placeholder="hdurl"
+          placeholder="Image URL - highest definition"
           name="hdurl"
           value={image.hdurl}
           onChange={handleChange}
         />
         <input
           type="text"
-          placeholder="url"
+          placeholder="Image URL - thumbnail size"
           name="url"
-          value={image.hdurl}
+          value={image.url}
           onChange={handleChange}
         />
-        <button type="submit">Create Your Cat!</button>
+        <button className="submit-btn" type="submit">
+          Add Your Image!
+        </button>
       </form>
     </div>
   );
