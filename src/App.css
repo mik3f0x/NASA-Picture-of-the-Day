@@ -4,6 +4,24 @@
   background-color: black;
 }
 
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: black;
+  height: 100px;
+  display: flex;
+  justify-content: start;
+}
+
+.nav-img-container {
+  object-fit: contain;
+}
+
+.nav-img-container img {
+  height: 100%;
+  width: 100%;
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;

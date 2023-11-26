@@ -50,19 +50,24 @@ function NavBar({ thumbnails, setFilteredThumbnails }) {
 
   return (
     <nav className="navbar">
-      <button onClick={handleClick}>Home</button>
-      <input
-        type="text"
-        placeholder="Search..."
-        className="string-search"
-        value={searchTerm}
-        onChange={handleSearch}
-        name="Search"
-      />
-      <select name="years" id="years" onChange={handleDropdown}>
-        {years}
-      </select>
-      <NavLink to="/new-image">Add Your Own!</NavLink>
+      <div className="nav-img-container">
+        <img src="nasa-banner.png" alt="NASA" />
+      </div>
+      <div>
+        <button onClick={handleClick}>Home</button>
+        <input
+          type="text"
+          placeholder="Search..."
+          className="string-search"
+          value={searchTerm}
+          onChange={handleSearch}
+          name="Search"
+        />
+        <select name="years" id="years" onChange={handleDropdown}>
+          {years}
+        </select>
+        <NavLink to="/new-image">Add Your Own!</NavLink>
+      </div>
     </nav>
   );
 }
