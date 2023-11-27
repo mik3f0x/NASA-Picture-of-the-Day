@@ -1,6 +1,6 @@
 # NASA Picture of the Day
 
-This project is a React frontend application that provides a user interface for interacting with a database of NASA images. The backend database, created by [Author's Name], serves as the data source for this application. The frontend allows users to perform full CRUD (Create, Read, Update, Delete) operations on the images.
+[NASA Picture of the Day](https://nasa-astronomy-photo-of-the-day.netlify.app/) is a React frontend application that provides a user interface for interacting with a database of NASA images. The backend database, created by [Author's Name], serves as the data source for this application. The frontend allows users to perform full CRUD (Create, Read, Update, Delete) operations on the images.
 
 ## Features
 
@@ -12,6 +12,8 @@ This project is a React frontend application that provides a user interface for 
 - **Delete:** Remove images from the collection.
 
 ## Installation
+
+The site is live remotely at https://nasa-astronomy-photo-of-the-day.netlify.app/
 
 To run this application locally, follow these steps:
 
